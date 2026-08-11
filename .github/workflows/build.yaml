@@ -1,0 +1,47 @@
+name: Build Keycloak theme
+
+on:
+  push:
+    tags:
+      - v*.*.*
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v7
+
+      - name: Set up JDK ⚙️
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Setup pnpm ⚙️
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node ⚙️
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies ⚙️
+        run: pnpm ci
+
+      - name: Build 🔧
+        run: pnpm run build-keycloak-theme
+
+      - name: Release 🚀
+        uses: softprops/action-gh-release@v3
+        with:
+          working_directory: dist_keycloak
+          files: |
+            keycloak-theme-for-kc-all-other-versions.jar
+            keycloak-theme-for-kc-22-to-25.jar
