@@ -1,0 +1,17 @@
+:root {
+  --pf-global--active-color--100: #9c27b0;
+  --pf-global--primary-color--100: #9c27b0;
+  --pf-global--primary-color--200: #8e24aa;
+}
+
+body.kcBodyClass {
+  background: url(./assets/background.png) no-repeat center center fixed;
+}
+
+.login-pf a {
+  color: var(--pf-global--primary-color--100);
+
+  &:hover {
+    color: var(--pf-global--primary-color--200);
+  }
+}

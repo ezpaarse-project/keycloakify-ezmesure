@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Template from '@keycloakify/svelte/login/Template.svelte';
+  import Template from './Template.svelte';
   import UserProfileFormFields from '@keycloakify/svelte/login/components/UserProfileFormFields.svelte';
   import type { KcContext } from 'keycloakify/login/KcContext';
   import type { ClassKey } from 'keycloakify/login/lib/kcClsx';
