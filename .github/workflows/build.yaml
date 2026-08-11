@@ -40,7 +40,4 @@ jobs:
       - name: Release 🚀
         uses: softprops/action-gh-release@v3
         with:
-          working_directory: dist_keycloak
-          files: |
-            keycloak-theme-for-kc-all-other-versions.jar
-            keycloak-theme-for-kc-22-to-25.jar
+          files: dist_keycloak/*
