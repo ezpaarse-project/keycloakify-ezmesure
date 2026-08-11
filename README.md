@@ -9,8 +9,8 @@ This starter is based on Vite and Svelte.
 # Quick start
 
 ```bash
-git clone https://github.com/keycloakify/keycloakify-starter-svelte
-cd keycloakify-starter-svelte
+git clone https://github.com/ezpaarse-project/keycloakify-ezmesure
+cd keycloakify-ezmesure
 pnpm ci
 ```
 

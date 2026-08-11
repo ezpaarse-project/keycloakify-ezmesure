@@ -7,9 +7,9 @@
 
 // noinspection JSUnusedGlobalSymbols
 
-export type ThemeName = 'keycloakify-starter-svelte';
+export type ThemeName = 'keycloakify-ezmesure';
 
-export const themeNames: ThemeName[] = ['keycloakify-starter-svelte'];
+export const themeNames: ThemeName[] = ['keycloakify-ezmesure'];
 
 export type KcEnvName = never;
 
